@@ -5,7 +5,7 @@ https://android.googlesource.com/platform/frameworks/opt/datetimepicker/
 
 #DateTimePicker 
 
-DateTimePicker is a library which contains the beautiful DatePicker and TimePicker that can be seen in the new Google Agenda app.
+DateTimePicker is a library which contains the beautiful DatePicker and TimePicker that can be seen in the new Google Agenda app. This is a fork of Flavien's version, since it isn't maintained anymore. I aim to maintain this library, but without changing the UI too much. Feel free to submit Pull Requests for fixing issues, adding features or improving the UI.
 
 **This picker is available for 2.1+**
 
@@ -29,23 +29,21 @@ Or browse the [source code of the sample application][3] for a complete example 
 
 ## Including in your project
 
-Last version is 0.0.2
+Just add the following statement in your build.gradle to include the latest version:
 
-Just add the following statement in your build.gradle
-
-    compile 'com.github.flavienlaurent.datetimepicker:library:VERSION'
+    compile 'com.github.cbruegg:datetimepicker:0.0.2-highlight-1.0.3'
 
 ## Usage
 
-Using the library is simple, just look at the source code of the provided sample [here][4]
+Using the library is simple, just look at the source code of the provided sample [here][4].
 
 ## Acknowledgements
 
-* Thanks to Google for this beautiful picker
+* Thanks to Google for this beautiful picker.
 
 ## License
 
-    Copyright 2013 Flavien Laurent (DatePicker) edisonw (TimePicker)
+    Copyright 2013 Flavien Laurent (DatePicker), edisonw (TimePicker)
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
