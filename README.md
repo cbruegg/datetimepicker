@@ -3,7 +3,7 @@ Official source:
 https://android.googlesource.com/platform/frameworks/opt/datetimepicker/
 (Android 4.3+)
 
-#DateTimePicker 
+# DateTimePicker 
 
 DateTimePicker is a library which contains the beautiful DatePicker and TimePicker that can be seen in the new Google Agenda app. This is a fork of Flavien's version, since it isn't maintained anymore. I aim to maintain this library, but without changing the UI too much. Feel free to submit Pull Requests for fixing issues, adding features or improving the UI.
 
