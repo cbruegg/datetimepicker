@@ -6,8 +6,8 @@ public final class ArrayUtils {
     }
 
     public static boolean contains(int[] arr, int value) {
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == value) {
+        for (int i1 : arr) {
+            if (i1 == value) {
                 return true;
             }
         }

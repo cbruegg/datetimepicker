@@ -1,13 +1,12 @@
 package com.fourmob.datetimepicker;
 
+import android.animation.Keyframe;
+import android.animation.ObjectAnimator;
+import android.animation.PropertyValuesHolder;
 import android.annotation.SuppressLint;
 import android.os.Build;
 import android.view.View;
 import android.view.accessibility.AccessibilityManager;
-
-import com.nineoldandroids.animation.Keyframe;
-import com.nineoldandroids.animation.ObjectAnimator;
-import com.nineoldandroids.animation.PropertyValuesHolder;
 
 import java.util.Calendar;
 
@@ -16,7 +15,7 @@ public class Utils {
 
     public static final int PULSE_ANIMATOR_DURATION = 544;
 
-	public static int getDaysInMonth(int month, int year) {
+    public static int getDaysInMonth(int month, int year) {
         switch (month) {
             case Calendar.JANUARY:
             case Calendar.MARCH:
@@ -36,9 +35,9 @@ public class Utils {
             default:
                 throw new IllegalArgumentException("Invalid Month");
         }
-	}
+    }
 
-	public static ObjectAnimator getPulseAnimator(View labelToAnimate, float decreaseRatio, float increaseRatio) {
+    public static ObjectAnimator getPulseAnimator(View labelToAnimate, float decreaseRatio, float increaseRatio) {
         Keyframe k0 = Keyframe.ofFloat(0f, 1f);
         Keyframe k1 = Keyframe.ofFloat(0.275f, decreaseRatio);
         Keyframe k2 = Keyframe.ofFloat(0.69f, increaseRatio);
@@ -52,12 +51,13 @@ public class Utils {
         return pulseAnimator;
     }
 
-	public static boolean isJellybeanOrLater() {
-		return Build.VERSION.SDK_INT >= 16;
-	}
+    public static boolean isJellybeanOrLater() {
+        return Build.VERSION.SDK_INT >= 16;
+    }
 
     /**
      * Try to speak the specified text, for accessibility. Only available on JB or later.
+     *
      * @param text Text to announce.
      */
     @SuppressLint("NewApi")

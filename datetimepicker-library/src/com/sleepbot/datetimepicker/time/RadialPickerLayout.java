@@ -16,6 +16,8 @@ package com.sleepbot.datetimepicker.time;
  * limitations under the License.
  */
 
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.annotation.SuppressLint;
 import android.app.Service;
 import android.content.Context;
@@ -41,8 +43,6 @@ import android.widget.FrameLayout;
 
 import com.fourmob.datetimepicker.R;
 import com.fourmob.datetimepicker.Utils;
-import com.nineoldandroids.animation.AnimatorSet;
-import com.nineoldandroids.animation.ObjectAnimator;
 
 public class RadialPickerLayout extends FrameLayout implements OnTouchListener {
     private static final String TAG = "RadialPickerLayout";
@@ -529,8 +529,7 @@ public class RadialPickerLayout extends FrameLayout implements OnTouchListener {
             Log.e(TAG, "TimePicker does not support view at index " + index);
             return;
         }
-        
-        //NineOldDroids does not work in this case due to dependency recursion.
+
         //Don't animate on API 14
         animate = animate && Build.VERSION.SDK_INT > 14;
 

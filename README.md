@@ -7,13 +7,13 @@ https://android.googlesource.com/platform/frameworks/opt/datetimepicker/
 
 DateTimePicker is a library which contains the beautiful DatePicker and TimePicker that can be seen in the new Google Agenda app. This is a fork of Flavien's version, since it isn't maintained anymore. I aim to maintain this library, but without changing the UI too much. Feel free to submit Pull Requests for fixing issues, adding features or improving the UI.
 
-**This picker is available for 2.1+**
+**This picker is available for API level 14+**
 
 You have a recurrence picker in the same style [here](https://github.com/Shusshu/Android-RecurrencePicker).
 
 ## WARNING
 
-* Requires android-support-v4 and [NineOldAndroids][5]
+* Requires android-support-v4
 * Accessibility is missing for DatePicker on all devices and Below ICS devices for TimePicker.
 * Scroll adjustment is missing below ICS devices for TimePicker and DatePicker.
 
@@ -61,4 +61,3 @@ Using the library is simple, just look at the source code of the provided sample
  [2]: https://raw.github.com/biboune/datetimepicker/master/datetimepicker-sample.apk
  [3]: https://github.com/biboune/datetimepicker/tree/master/datetimepicker-sample
  [4]: https://github.com/biboune/datetimepicker/blob/master/datetimepicker-sample/src/com/fourmob/datetimepicker/sample/MainActivity.java
- [5]: http://nineoldandroids.com/
