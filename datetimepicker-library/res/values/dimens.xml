@@ -28,14 +28,14 @@
     <dimen name="minimum_margin_sides">48dip</dimen>
     <dimen name="minimum_margin_top_bottom">24dip</dimen>
 
-    <item name="circle_radius_multiplier" format="float" type="string">0.82</item>
-    <item name="circle_radius_multiplier_24HourMode" format="float" type="string">0.85</item>
-    <item name="selection_radius_multiplier" format="float" type="string">0.16</item>
-    <item name="ampm_circle_radius_multiplier" format="float" type="string">0.19</item>
-    <item name="numbers_radius_multiplier_normal" format="float" type="string">0.81</item>
-    <item name="numbers_radius_multiplier_inner" format="float" type="string">0.60</item>
-    <item name="numbers_radius_multiplier_outer" format="float" type="string">0.83</item>
-    <item name="text_size_multiplier_normal" format="float" type="string">0.17</item>
-    <item name="text_size_multiplier_inner" format="float" type="string">0.14</item>
-    <item name="text_size_multiplier_outer" format="float" type="string">0.11</item>
+    <string name="circle_radius_multiplier" translatable="false">0.82</string>
+    <string name="circle_radius_multiplier_24HourMode" translatable="false">0.85</string>
+    <string name="selection_radius_multiplier" translatable="false">0.16</string>
+    <string name="ampm_circle_radius_multiplier" translatable="false">0.19</string>
+    <string name="numbers_radius_multiplier_normal" translatable="false">0.81</string>
+    <string name="numbers_radius_multiplier_inner" translatable="false">0.60</string>
+    <string name="numbers_radius_multiplier_outer" translatable="false">0.83</string>
+    <string name="text_size_multiplier_normal" translatable="false">0.17</string>
+    <string name="text_size_multiplier_inner" translatable="false">0.14</string>
+    <string name="text_size_multiplier_outer" translatable="false">0.11</string>
 </resources>
