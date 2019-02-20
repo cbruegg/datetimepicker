@@ -557,21 +557,12 @@ public class RadialPickerLayout extends FrameLayout implements OnTouchListener {
             mTransition.playTogether(anims);
             mTransition.start();
         } else {
-            if (Build.VERSION.SDK_INT >= 11) {
-                int hourAlpha = (index == HOUR_INDEX) ? 1 : 0;
-                int minuteAlpha = (index == MINUTE_INDEX) ? 1 : 0;
-                mHourRadialTextsView.setAlpha(hourAlpha);
-                mHourRadialSelectorView.setAlpha(hourAlpha);
-                mMinuteRadialTextsView.setAlpha(minuteAlpha);
-                mMinuteRadialSelectorView.setAlpha(minuteAlpha);
-            } else {
-                int hourVisibility = (index == HOUR_INDEX) ? View.VISIBLE : View.INVISIBLE;
-                int minuteVisibility = (index == MINUTE_INDEX) ? View.VISIBLE : View.INVISIBLE;
-                mHourRadialTextsView.setVisibility(hourVisibility);
-                mHourRadialSelectorView.setVisibility(hourVisibility);
-                mMinuteRadialTextsView.setVisibility(minuteVisibility);
-                mMinuteRadialSelectorView.setVisibility(minuteVisibility);
-            }
+            int hourAlpha = (index == HOUR_INDEX) ? 1 : 0;
+            int minuteAlpha = (index == MINUTE_INDEX) ? 1 : 0;
+            mHourRadialTextsView.setAlpha(hourAlpha);
+            mHourRadialSelectorView.setAlpha(hourAlpha);
+            mMinuteRadialTextsView.setAlpha(minuteAlpha);
+            mMinuteRadialSelectorView.setAlpha(minuteAlpha);
         }
 
     }
@@ -774,11 +765,9 @@ public class RadialPickerLayout extends FrameLayout implements OnTouchListener {
      * in the circle.
      */
     public void onInitializeAccessibilityNodeInfo(AccessibilityNodeInfo info) {
-        if (Build.VERSION.SDK_INT >= 14) {
-            super.onInitializeAccessibilityNodeInfo(info);
-            info.addAction(AccessibilityNodeInfo.ACTION_SCROLL_FORWARD);
-            info.addAction(AccessibilityNodeInfo.ACTION_SCROLL_BACKWARD);
-        }
+        super.onInitializeAccessibilityNodeInfo(info);
+        info.addAction(AccessibilityNodeInfo.ACTION_SCROLL_FORWARD);
+        info.addAction(AccessibilityNodeInfo.ACTION_SCROLL_BACKWARD);
     }
 
     /**

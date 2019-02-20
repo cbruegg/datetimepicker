@@ -18,11 +18,8 @@ package com.sleepbot.datetimepicker.time;
 import android.animation.ObjectAnimator;
 import android.app.ActionBar.LayoutParams;
 import android.content.res.Resources;
-import android.graphics.Rect;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
-import android.text.method.TransformationMethod;
 import android.util.Log;
 import android.view.KeyCharacterMap;
 import android.view.KeyEvent;
@@ -209,23 +206,6 @@ public class TimePickerDialog extends DialogFragment implements RadialPickerLayo
         mMinuteView.setOnKeyListener(keyboardListener);
         mAmPmTextView = (TextView) view.findViewById(R.id.ampm_label);
         mAmPmTextView.setOnKeyListener(keyboardListener);
-        if (Build.VERSION.SDK_INT <= 14) {
-
-            mAmPmTextView.setTransformationMethod(new TransformationMethod() {
-
-                private final Locale locale = getResources().getConfiguration().locale;
-
-                @Override
-                public CharSequence getTransformation(CharSequence source, View view) {
-                    return source != null ? source.toString().toUpperCase(locale) : null;
-                }
-
-                @Override
-                public void onFocusChanged(View view, CharSequence sourceText, boolean focused, int direction, Rect previouslyFocusedRect) {
-
-                }
-            });
-        }
         String[] amPmTexts = new DateFormatSymbols().getAmPmStrings();
         mAmText = amPmTexts[0];
         mPmText = amPmTexts[1];

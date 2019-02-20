@@ -51,10 +51,6 @@ public class Utils {
         return pulseAnimator;
     }
 
-    public static boolean isJellybeanOrLater() {
-        return Build.VERSION.SDK_INT >= 16;
-    }
-
     /**
      * Try to speak the specified text, for accessibility. Only available on JB or later.
      *
@@ -62,16 +58,12 @@ public class Utils {
      */
     @SuppressLint("NewApi")
     public static void tryAccessibilityAnnounce(View view, CharSequence text) {
-        if (isJellybeanOrLater() && view != null && text != null) {
+        if (Build.VERSION.SDK_INT >= 16 && view != null && text != null) {
             view.announceForAccessibility(text);
         }
     }
 
     public static boolean isTouchExplorationEnabled(AccessibilityManager accessibilityManager) {
-        if (Build.VERSION.SDK_INT >= 14) {
-            return accessibilityManager.isTouchExplorationEnabled();
-        } else {
-            return false;
-        }
+        return accessibilityManager.isTouchExplorationEnabled();
     }
 }
