@@ -31,7 +31,7 @@ Or browse the [source code of the sample application][3] for a complete example 
 
 Just add the following statement in your build.gradle to include the latest version:
 
-    compile 'com.github.cbruegg:datetimepicker:0.0.2-highlight-1.0.3'
+    compile 'com.github.cbruegg:datetimepicker:0.0.3'
 
 ## Usage
 
